@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    static void switchOperator() {
         // оператор switch
         int i = 4;
         switch (i) {
@@ -33,7 +33,9 @@ public class Main {
             default:
                 System.out.println("Неправильный день недели");
         }
+    }
 
+    static void arrays() {
         // массивы - возможность под одним именем хранить много значений одного и того же типа в определенном порядке
         // массивы являются статической структурой, которая не может изменяться по длине
         // индексы - порядковые номера начинающиеся с 0
@@ -73,8 +75,9 @@ public class Main {
 //
 //        // Взять последний элемент
         System.out.println("Последний элемент в doubleArray: " + doubleArray[doubleArray.length - 1]);
+    }
 
-        // Циклы - возможность повторить код несколько раз
+    static void whileLoop() {
         // цикл while (пока)
         int q = 5;
         while (q <= 100) {
@@ -100,14 +103,18 @@ public class Main {
             System.out.println("Ваше число в квадрате = " + (k*k));
             n = n - 1;
         }
+    }
 
+    static void doWhileLoop() {
         // do..while {
-        q = 5;
+        int q = 5;
         do {
             System.out.println(q);
             q = q - 1;
         } while (q > 0);
+    }
 
+    static void forLoop() {
         // цикл for
         System.out.println("Цикл for");
         for (int index = 5; index <= 100; index = index + 5) {
@@ -118,8 +125,9 @@ public class Main {
         for (int index = 0, j = 2; index + j < 14; index = index + 2, j = j - 1) {
             System.out.println(index + " " + j);
         }
+    }
 
-        // continue и break
+    static void continueAndBreak() {
         // continue - пропустить все действия после continue и вернуться на проверку условия
         int j = 10;
         while (j < 20) {
@@ -143,7 +151,10 @@ public class Main {
 
         }
         System.out.println(j);
+    }
 
+    static void breakExample() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Введите положительное число");
         int positiveInt;
         while (true) {
@@ -155,14 +166,35 @@ public class Main {
             }
         }
         System.out.println(positiveInt);
+    }
 
-        // Инкремент, декремент
+    static void incrementDecrement() {
         int var = 1;
         var++;
         System.out.println(var);
         var--;
         System.out.println(var);
 
+        int l = 5;
+        // постфиксная запись
+        l++;
+        l--;
+        // префиксная запись
+        ++l;
+        --l;
+
+        l = 5;
+        System.out.println(5 * l++); // 5 * 5, а потом l += 1
+        System.out.println(l);
+        l = 5;
+        System.out.println(5 * ++l); // сначала l += 1, а потом 5 * 6
+
+        l = 5;
+        System.out.println(l++ * ++l); // каверзный вопрос
+        System.out.println(l);
+    }
+
+    static void loopsAndArrays() {
         // Работа с массивами через циклы
         int[] numbers = new int[100];
         System.out.println(Arrays.toString(numbers));
@@ -183,8 +215,9 @@ public class Main {
         for (int index = 0; index < numbers.length; index = index + 5) {
             System.out.println(numbers[index]);
         }
+    }
 
-        // task1
+    static void task1() {
         /*
         Создать массив с любыми целыми значениями
         С помощью цикла вывести все четные элементы, а нечетные заменить на 0
@@ -204,8 +237,9 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(ints));
+    }
 
-        // task2
+    static void task2() {
         /*
         Создать массив с любыми дробными числами
         С помощью цикла положительные элементы вывести на экран в виде "Положительный элемент: 5.4"
@@ -225,7 +259,9 @@ public class Main {
                 System.out.println("Неположительный элемент: " + d);
             }
         }
+    }
 
+    static void task3() {
         // task3
         /*
         Спросить у пользователя целое положительное число m
@@ -234,17 +270,36 @@ public class Main {
         Заполнить каждый элемент по формуле i * i + 0.5 , где i - индекс элемента
         Вывести весь массив на экран
          */
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите положительное число");
+        int m = sc.nextInt();
+        while (m < 0) {
+            System.out.println("Вы ввели отрицательное число, введите положительное");
+            m = sc.nextInt();
+        }
 
+        double[] doubleArray = new double[m];
+        for (int i = 0; i < doubleArray.length; i++) {
+            doubleArray[i] = i * i + 0.5;
+        }
+        System.out.println(Arrays.toString(doubleArray));
+    }
+
+    static void forEachLoop() {
         // for..each
+        double[] doubles = new double[]{-1.001, 5.89, 0};
         System.out.println("For each");
         int index = 0;
+        // В переменной d по очереди будут значения всех элементов массива
         for (double d: doubles) {
             System.out.println("Элемент на индексе: " + index + " со значением: " + d);
             index += 1;
         }
+    }
 
+    static void shortOperators() {
         // Краткое изменение переменных
-        index = 0;
+        int index = 0;
 
         index += 5; //index = index + 5;
         System.out.println(index);
@@ -256,25 +311,11 @@ public class Main {
         System.out.println(index);
         index %= 4; // index = index % 4;
         System.out.println(index);
+    }
 
-        // Префиксная запись и постфиксная запись
-        int l = 5;
-        l++;
-        ++l;
-        l--;
-        --l;
-
-        l = 5;
-        System.out.println(5 * l++); // 5 * 5, а потом l += 1
-        System.out.println(l);
-        l = 5;
-        System.out.println(5 * ++l); // сначала l += 1, а потом 5 * 6
-
-        l = 5;
-        System.out.println(l++ * ++l); // каверзный вопрос
-        System.out.println(l);
-
+    static void ternaryOperator() {
         // Тернарный оператор
+        Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
         x = x < 0? -x: x;
         if (x < 0) {
@@ -302,7 +343,9 @@ public class Main {
             answer = "Нет ответа";
         }
         System.out.println(answer);
+    }
 
+    static void math() {
         // Math
         // pow - возведение одного числа в степень второго числа
         System.out.println(Math.pow(2, 10));
@@ -343,9 +386,12 @@ public class Main {
         // random
         System.out.println(Math.random()); // случайное число от 0 включая до 1 не включая
         System.out.println(((int)(Math.random() * 101)) - 50); // случайное число от -50 включая до 50 включая
+    }
 
+    static void arraysOperations() {
         // Arrays
         // Сравнить массивы на равенство
+        double[] doubleArray = new double[]{1.1, 2.2, 3.3};
         System.out.println(Arrays.equals(doubleArray, new double[]{1.1, 2.2, 3.3}));
         // Отсортировать массив
         double[] doubles1 = new double[]{2.2, 3.3, 1.1};
@@ -353,5 +399,43 @@ public class Main {
         System.out.println(Arrays.toString(doubles1));
         // Если массив отсортирован, то можно найти индекс элемента
         System.out.println(Arrays.binarySearch(doubles1, 2.2));
+    }
+
+    public static void main(String[] args) {
+        // Оператор switch
+        switchOperator();
+        // Массивы
+        arrays();
+        // Циклы - возможность повторить код несколько раз
+        // Цикл while
+        whileLoop();
+        // Цикл do..while
+        doWhileLoop();
+        // Цикл for
+        forLoop();
+        // continue и break
+        continueAndBreak();
+        // Пример использования break
+        breakExample();
+        // Инкремент, декремент
+        incrementDecrement();
+        // Работа с массивами через циклы
+        loopsAndArrays();
+        // task1
+        task1();
+        // task2
+        task2();
+        // task3
+        task3();
+        // Цикл for..each
+        forEachLoop();
+        // Краткое изменение переменных
+        shortOperators();
+        // Тернарный оператор
+        ternaryOperator();
+        // Математические действия
+        math();
+        // Действия над массивами
+        arraysOperations();
     }
 }
