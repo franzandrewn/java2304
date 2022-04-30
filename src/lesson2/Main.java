@@ -64,8 +64,8 @@ public class Main {
 
         // Взаимодействие с элементов по его индексу
         System.out.println("Второй элемент в doubleArray: " + doubleArray[1]);
-        System.out.println(doubleArray[-1]); // несуществующий индекс
-        System.out.println(doubleArray[3]); // несуществующий индекс
+//        System.out.println(doubleArray[-1]); // несуществующий индекс
+//        System.out.println(doubleArray[3]); // несуществующий индекс
 
         System.out.println("Первый элемент intArray перед изменением: " + intArray[0]);
         intArray[0] = 100;
@@ -85,10 +85,10 @@ public class Main {
 
         // Бесконечный цикл
         q = 0;
-        while (q <= 0) {
-            System.out.println(q);
-            q = q - 1;
-        }
+//        while (q <= 0) {
+//            System.out.println(q);
+//            q = q - 1;
+//        }
 
         // Спросить у пользователя N чисел, вывести их квадраты в ответ
         Scanner sc = new Scanner(System.in);
