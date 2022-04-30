@@ -3,16 +3,22 @@ package lesson1;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        // Простейшая программа - выводит строку "Привет мир!" и выводит 7 в разных строках
+    static void comments() {
+        // однострочный комментарий
         /*
         Первая строка комментария
         Вторая строка комментария
          */
+    }
+
+    static void simpleProgram() {
+        // Простейшая программа - выводит строку "Привет мир!" и выводит 7 в разных строках
         // sout - аббревиатура для System.out.println();
         System.out.println("\"Привет мир!\"");
         System.out.println(2 + 5);
+    }
 
+    static void arithmeticOperations() {
         // Арифметические действия
         // Целые числа
         System.out.println("Арифметические действия над целыми числами");
@@ -34,29 +40,39 @@ public class Main {
         // Строки - текстовый тип данных
         System.out.println("Единственное 'арифметическое' действие над строками");
         System.out.println("Левая часть строки" + " " + "Правая часть строки");
+    }
 
+    static void operationsOrder() {
         // Порядок операций - работают правила математики
         System.out.println("Порядок операция");
         System.out.println(2 + 3 * 5);
         System.out.println((2 + 3) * 5);
         System.out.println(33 % 17 / 3); // 33 % 17 = 16; 16 / 3 = 5
         System.out.println(34 / 3 % 3); // 34 / 3 = 11; 11 % 3 = 2
+    }
 
+    static void codeStyle() {
         // "Стиль" кода
         // IDEA - Ctrl + Alt + L
+    }
 
+    static void variableCreation() {
         // Переменные - имена для значений какого-нибудь типа данных
         // Создание переменной
         // Тип_данных имя_переменной;
         int count;
-
-
         // Инициализация переменной - первичное задание значения
         // Операция '=' - присваивание значения какой-либо переменной
         count = 0;
         System.out.println(count);
         System.out.println(count + 10);
 
+        count = 1;
+        System.out.println(count);
+        System.out.println(count + 10);
+    }
+
+    static void variableNameRules() {
         // Имена переменных
         // Имена переменных (и не только) начинаются с буквы, '_' или '$', после этого можно ещё использовать цифры
         // Регистр в именах важен, то есть people =/= People
@@ -70,11 +86,9 @@ public class Main {
         int personAge;
         int personSalary;
         int ageOfMsu;
+    }
 
-        count = 1;
-        System.out.println(count);
-        System.out.println(count + 10);
-
+    static void types() {
         // Типы данных
         // 1. Примитивные типы данных (ключевые слова Java)
         // 2. Ссылочные типы данных (массивы, классы и т.д.)
@@ -108,15 +122,6 @@ public class Main {
         double d = 4.5;
         System.out.println(d);
 
-        // И float, и double подчиняются международному стандарту IEEE 754
-        System.out.println(5.0 / 2.1);
-        System.out.printf("%.4f\n", 5.0 / 2.1); // souf
-        System.out.printf("%d\n", 5 / 3);
-
-        System.out.println(0.1 + 0.2);
-        System.out.println(5 / 0.0);
-        System.out.println(5 / (-0.0));
-
         // Символы
         // char, 1 - 4 байт
         char c = 'n';
@@ -132,7 +137,20 @@ public class Main {
         System.out.println(bool);
         bool = false;
         System.out.println(bool);
+    }
 
+    static void floatNumbersStandard() {
+        // И float, и double подчиняются международному стандарту IEEE 754
+        System.out.println(5.0 / 2.1);
+        System.out.printf("%.4f\n", 5.0 / 2.1); // souf
+        System.out.printf("%d\n", 5 / 3);
+
+        System.out.println(0.1 + 0.2);
+        System.out.println(5 / 0.0);
+        System.out.println(5 / (-0.0));
+    }
+
+    static void typeConversion() {
         // Преобразование типов - превращение значения одного типа в значение другого типа
         // 1. Восходящее - тип меньшей длины преобразуем в тип большей длины
         byte smallVar = 12;
@@ -144,7 +162,9 @@ public class Main {
         int bigInt2 = 129;
         byte smallByte2 = (byte) bigInt2;
         System.out.println(smallByte2);
+    }
 
+    static void comparisons() {
         // Операции сравнения
         System.out.println(5 > 2); // true
         System.out.println(2 > 5); // false
@@ -167,7 +187,9 @@ public class Main {
 
         boolean is5equals5 = 5 == 5;
         System.out.println(is5equals5);
+    }
 
+    static void ifKeyword() {
         // Условный оператор - возможность исполнить блок кода только по определенному условию
         if (5 > 0) {
             // Всё внутри фигурных скобочек у условия выполнится, если условие истинно
@@ -183,8 +205,9 @@ public class Main {
             System.out.println("Второе условие было ложным");
             System.out.println("И правда второе услоие ложно");
         }
+    }
 
-        // task1
+    static void task1() {
         /*
         Создать переменную double balance с любым некрасивым числом (без большого числа нулей в конце)
         Создать переменную double percent с любым числом (пусть будет от 17.0 до 21.0)
@@ -195,26 +218,37 @@ public class Main {
         double percent = 19.5;
         balance = balance * (1 + percent / 100);
         System.out.println(balance);
+    }
 
-        // task2
+    static void task2() {
         /*
         В случае если на балансе больше 100 000, вывести строку "Много денег"
         В обратном случае вывести строку "Мало денег"
          */
+        double balance = 80000;
+        double percent = 19.5;
+        balance = balance * (1 + percent / 100);
+        System.out.println(balance);
         if (balance > 100000) {
             System.out.println("Много денег");
         } else {
             System.out.println("Мало денег");
         }
+    }
 
-        int dayOfWeek = -5;
-        if (dayOfWeek == 0) {
+    static void threeOptions() {
+        int number = -5;
+        if (number == 0) {
             System.out.println("0");
-        } else if (dayOfWeek > 0) {
+        } else if (number > 0) {
             System.out.println("+");
         } else {
             System.out.println("-");
         }
+    }
+
+    static void elseIf() {
+        int dayOfWeek = 5;
 
         if (dayOfWeek == 1) {
             System.out.println("Пн");
@@ -233,7 +267,9 @@ public class Main {
         } else {
             System.out.println("неправильный день");
         }
+    }
 
+    static void logicalOperators() {
         // Операции с логическими типами
         // Отрицание (not) - взять обратное значение
         System.out.println("Отрицание");
@@ -254,7 +290,7 @@ public class Main {
         System.out.println(true && false);
         System.out.println(true && true);
 
-        dayOfWeek = 9;
+        int dayOfWeek = 9;
         if (dayOfWeek < 1 || dayOfWeek > 7) {
             System.out.println("Неправильный день");
         }
@@ -264,6 +300,9 @@ public class Main {
             System.out.println("Правильный день");
         }
 
+    }
+
+    static void bitOperators() {
         // Побитовые операции
         System.out.println(5 & 1);
         System.out.println(5 | 1);
@@ -274,7 +313,9 @@ public class Main {
 
         System.out.println(21 >> 2);
         System.out.println(21 / 4);
+    }
 
+    static void scanner() {
         // Ввод из консоли
         // Создание сканера с источником данных - ввод от пользователя
         Scanner sc = new Scanner(System.in);
@@ -284,9 +325,9 @@ public class Main {
         System.out.println(input);
 
         System.out.println("Введите сумму на счётё");
-        balance = sc.nextDouble();
+        double balance = sc.nextDouble();
         System.out.println("Введите проценты");
-        percent = sc.nextDouble();
+        double percent = sc.nextDouble();
         balance = balance * (1 + percent / 100) * (1 + percent / 100);
         System.out.println("Через 2 года у вас будет " + balance + " у.е.");
 
@@ -297,7 +338,9 @@ public class Main {
         } else {
             System.out.println("средств: " + balance);
         }
+    }
 
+    static void string() {
         // String - строковый тип данных (набор символов)
         String str = "Привет, это программа!";
         // length - длина строки (количество символов)
@@ -327,5 +370,51 @@ public class Main {
         // toUpperCase/toLowerCase - все буквы превратить в большие/маленькие буквы
         System.out.println(str.toLowerCase());
         System.out.println(str.toUpperCase());
+    }
+
+
+    public static void main(String[] args) {
+        // Комментарии
+        comments();
+        // Простейшая программа
+        simpleProgram();
+        // Арифметические операторы
+        arithmeticOperations();
+        // Порядок операторов
+        operationsOrder();
+        // Стиль кода
+        codeStyle();
+        // Создание переменных
+        variableCreation();
+        // Правила именования переменных
+        variableNameRules();
+        // Типы данных
+        types();
+        // Стандарт дробных чисел
+        floatNumbersStandard();
+        // Приведение типов
+        typeConversion();
+        // Операторы сравнения
+        comparisons();
+        // Условный оператор
+        ifKeyword();
+        // task1
+        task1();
+        // task2
+        task2();
+        // Вложение условных операторов
+        threeOptions();
+        // Множественное вложение условных операторов, else if
+        elseIf();
+        // Логические операторы
+        logicalOperators();
+        // Побитовые операторы
+        bitOperators();
+        // Ввод пользователя, класс Scanner
+        scanner();
+        // Класс String
+        string();
+
+
     }
 }
