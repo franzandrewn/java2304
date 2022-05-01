@@ -139,18 +139,17 @@ public class Main {
         и "перекрашивает" объект figure в цвет newColor
         (изменяет значение поля color у figure на newColor)
          */
+        Figure f = new Figure(3,4,"black");
+        System.out.println(f);
+        paint(f, "white");
+        System.out.println(f);
     }
 
-    static void task4() {
-        /*
-        Создать интерфейсы СanSwim, СanFly с методами void swim() и void fly() соответственно
-        Создать класс Duck, который реализует оба интерфейса
-        и при плавании выводит "Кря, плаваю", при полете "Кря, летаю"
-        Создать класс Plane, который реализует интерфейс canFly
-        и при полете выводит "Сжигаю керосин"
-        В psvm создать объекты классов Duck и Plane и вызвать у них доступные методы
-         */
+    static void paint(Figure figure, String newColor) {
+        figure.color = newColor;
     }
+
+
 
     static void abstractKeyword() {
         // abstract - ключевое слово, можно поставить перед классом и перед методами
@@ -212,32 +211,46 @@ public class Main {
         System.out.println(sum);
     }
 
+    static void task4() {
+        /* HW0
+        Создать интерфейсы СanSwim, СanFly с методами void swim() и void fly() соответственно
+        Создать класс Duck, который реализует оба интерфейса
+        и при плавании выводит "Кря, плаваю", при полете "Кря, летаю"
+        Создать класс Plane, который реализует интерфейс canFly
+        и при полете выводит "Сжигаю керосин"
+        В psvm создать объекты классов Duck и Plane и вызвать у них доступные методы
+         */
+    }
+
     public static void main(String[] args) {
         // 4 принципа ООП
         // 1. Абстракция
-//        abstraction();
+        abstraction();
         // 2. наследование
-//        inheritance();
+        inheritance();
         // 3. полиморфизм
-//        polymorphism();
+        polymorphism();
         // пакеты (ремарка)
-//        packages();
+        packages();
         // 4. инкапсуляция
-//        encapsulation();
+        encapsulation();
         // task1
-//        task1();
+        task1();
         // task2
-//        task2();
+        task2();
         // task3
-//        task3();
+        task3();
         // ключевое слово abstract
-//        abstractKeyword();
+        abstractKeyword();
         // ключевое слово final
-//        finalKeyword();
+        finalKeyword();
         // ключевое слово static
-//        staticKeyword();
+        staticKeyword();
         // интерфейсы
-//        interfaces();
+        interfaces();
+        // Пример записи в переменную предка объекта наследника
         inheritanceExample();
+        // task4
+        task4();
     }
 }
