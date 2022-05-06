@@ -125,6 +125,20 @@ public class Main {
         Создать метод, принимающий массив целых чисел ints и целое число target
         и возвращает индекс элемента, равного target, внутри ints
          */
+        int[] arr = new int[]{1,2,3,4,5,6};
+        System.out.println(indexOf(arr, 2));
+        System.out.println(indexOf(arr, -1));
+    }
+
+    static int indexOf(int[] ints, int target) {
+        int result = -1;
+        for (int i = 0; i < ints.length; i++) {
+            if (ints[i] == target) {
+                result = i;
+                break;
+            }
+        }
+        return result;
     }
 
     static void a() {
@@ -221,6 +235,17 @@ public class Main {
         В полученной строке заменить все слова "телефон" на "phone"
         и убрать лишние пробелы
          */
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        input = input.replace("телефон", "phone");
+        // Заменяем все цепочки пробелов на один пробел
+        while (input.contains("  ")) {
+            input = input.replace("  ", " ");
+        }
+        // Убираем пробел в начале и в конце
+        input = input.trim();
+        System.out.println(input);
     }
 
     public static void main(String[] args) {

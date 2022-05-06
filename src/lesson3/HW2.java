@@ -6,7 +6,15 @@ package lesson3;
 Например, если вызвать repeatString("asd", 3), то в консоль трижды выведется строка "asd"
  */
 public class HW2 {
-    public static void main(String[] args) {
+    static void repeatString(String s, int num) {
+        for (int i = 0; i < num; i++) {
+            System.out.println(s);
+        }
+    }
 
+    public static void main(String[] args) {
+        repeatString("asd", 2);
+        repeatString("as", 0);
+        repeatString("a", -1);
     }
 }

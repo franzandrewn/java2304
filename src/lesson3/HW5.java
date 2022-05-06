@@ -16,6 +16,15 @@ package lesson3;
  */
 public class HW5 {
     public static void main(String[] args) {
+        PhoneNumber p = new PhoneNumber(89991231212L, "рабочий");
+        PhoneNumber p1 = new PhoneNumber();
+        p1.num = 89991231212L;
+        p1.numType = "рабочий";
+        PhoneNumber p2 = new PhoneNumber(89991231212L, "рабочий");
 
+        p2.print();
+        System.out.println(p2.getNum());
+        p2.changeType("мобильный");
+        p2.print();
     }
 }

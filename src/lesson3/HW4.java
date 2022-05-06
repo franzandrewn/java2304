@@ -11,6 +11,11 @@ package lesson3;
  */
 public class HW4 {
     public static void main(String[] args) {
-
+        PhoneNumber p1 = new PhoneNumber();
+        p1.num = 89991231212L;
+        p1.numType = "рабочий";
+        PhoneNumber p2 = new PhoneNumber(89991231212L, "рабочий");
+        System.out.println("Телефон (" + p1.numType + ") " + p1.num);
+        System.out.println("Телефон (" + p2.numType + ") " + p2.num);
     }
 }

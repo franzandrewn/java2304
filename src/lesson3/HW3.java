@@ -12,6 +12,9 @@ numType строчного типа
  */
 public class HW3 {
     public static void main(String[] args) {
-
+        PhoneNumber number = new PhoneNumber();
+        number.num = 89991231212L;
+        number.numType = "рабочий";
+        System.out.println("Телефон (" + number.numType + ") " + number.num);
     }
 }
