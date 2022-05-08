@@ -337,6 +337,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Аггрегация
 //        aggregation();
         // Java Collection Framework
         // Структуры данных - типы данных, позволяющие хранить много элементов в себе
@@ -356,6 +357,7 @@ public class Main {
 //        dequeue();
         // Словарь
 //        maps();
+        // Специальный цикл for
         forEach();
     }
 }
