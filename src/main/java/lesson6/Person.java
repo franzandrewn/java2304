@@ -1,8 +1,12 @@
 package lesson6;
 
-public class Person implements Comparable<Person> {
-    String name;
-    int age;
+import java.io.Serializable;
+
+public class Person implements Comparable<Person>, Serializable {
+    public String name;
+    public int age;
+    public static int count = 0;
+    public transient String password;
 
     public Person() {
     }
