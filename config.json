@@ -1,0 +1,17 @@
+{
+  "notifiers": [
+    {
+      "name": "VK",
+      "isOn": true
+    },
+    {
+      "name": "Telegram",
+      "isOn": false
+    },
+    {
+      "name": "SMS",
+      "isOn": true
+    }
+  ],
+  "volume": 0.9
+}

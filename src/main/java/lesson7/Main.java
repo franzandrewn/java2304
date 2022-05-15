@@ -296,7 +296,7 @@ public class Main {
             e.printStackTrace();
         }
         System.out.println(john);
-        System.out.println(john.address.city);
+        System.out.println(john.getCity());
     }
 
     static void maven() {

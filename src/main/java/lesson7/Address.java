@@ -6,6 +6,16 @@ public class Address {
     String state;
     String postalCode;
 
+    public Address() {
+    }
+
+    public Address(String streetAddress, String city, String state, String postalCode) {
+        this.streetAddress = streetAddress;
+        this.city = city;
+        this.state = state;
+        this.postalCode = postalCode;
+    }
+
     @Override
     public String toString() {
         return "Address{" +
