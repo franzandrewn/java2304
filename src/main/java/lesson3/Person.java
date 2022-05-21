@@ -41,6 +41,12 @@ public class Person implements Printable {
         this.age = age;
     }
 
+    public Person(String name, int age, int id) {
+        this.name = name;
+        this.age = age;
+        this.id = id;
+    }
+
     // Поведение объектов: список методов
     public void print() {
         System.out.println("Человек с именем: " + name + ", возрастом: " + age);
