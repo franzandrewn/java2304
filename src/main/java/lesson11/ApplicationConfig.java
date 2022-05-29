@@ -1,15 +1,16 @@
 package lesson11;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 import org.sqlite.SQLiteDataSource;
 
 import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan
+@PropertySources(
+        {@PropertySource("file:./src/main/resources/application.properties"),
+        @PropertySource("file:./src/main/resources/additional.properties")}
+)
 public class ApplicationConfig {
 
     @Bean
